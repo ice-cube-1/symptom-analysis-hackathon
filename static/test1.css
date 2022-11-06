@@ -1,0 +1,10 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #223344;
+    background-color: #fdfeff;
+}
+td {
+    vertical-align: top;
+    align-items: left;
+    padding: 5px;
+}

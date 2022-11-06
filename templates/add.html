@@ -1,10 +1,18 @@
 <html>
+    <head>
+        <link rel="stylesheet" href="{{ url_for('static', filename='test1.css') }}">
+    </head>
     <body>
+        <table>
+            <tr>
+            <td><img src="{{ url_for('static', filename='Logo.png') }}" , width="40px", height="40px"/></td><td><h1>Whage</h1></td>
+            </tr>
+        </table>
         <form action = "http://localhost:8001/{{ goto }}" method = "post">
             <p>Unfortunately this chatbot doesn't know, and would reccomend you see a doctor. What did they say?</p>
-            <p><input type = "text" name = "illness" /></p>
+            <p><input type = "text" name = "illness" placeholder="e.g. Headache" size="50px"/></p>
             <p>Please give this a defining symptom:</p>
-            <p><input type = "text" name = "question" /></p>
+            <p><input type = "text" name = "question" placeholder="e.g. Does your head hurt?" size="50px"/></p>
             <p><input type = "submit" value = "OK" /></p>
          </form>
     </body>

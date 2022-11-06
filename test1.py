@@ -1,9 +1,7 @@
-from flask import Flask, render_template, request, redirect
+from flask import Flask, render_template, request, redirect, url_for
 import json
 
 app = Flask(__name__)
-
-questions = [["does your head hurt?","headache","guess"]]
 def dataDump(todump):
     with open('test.json','w') as f:
         tojson={'json':todump}
@@ -77,6 +75,7 @@ def createy(position):
 
 @app.route('/create/<int:position>',methods=['POST','GET'])
 def create(position):
+    questions=dataDump()
     if request.method=='POST':
         animal=request.form['illness']
         question=request.form['question']
@@ -99,7 +98,11 @@ def found(illness):
             print(i)
             if therapists[i]["illness"] == illness:
                 useful[i]=therapists[i]
-        return render_template('found.html',illness=illness,therapists=useful)
+        if len(useful.keys()) == 0:
+            therapist=False
+        else:
+            therapist=True
+        return render_template('found.html',illness=illness,therapists=useful,therapist=therapist)
 
 @app.route('/professional',methods=["POST","GET"])
 def professional():

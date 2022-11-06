@@ -1,5 +1,13 @@
 <html>
+    <head>
+        <link rel="stylesheet" href="{{ url_for('static', filename='test1.css') }}">
+    </head>
     <body>
+        <table>
+            <tr>
+            <td><img src="{{ url_for('static', filename='Logo.png') }}" , width="40px", height="40px"/></td><td><h1>Whage</h1></td>
+            </tr>
+        </table>
         <form action = "http://localhost:8001/{{ position }}" method = "post">
             <p>{{ question }}</p>
             <p><input type = "radio" name = "yn" value="yes" /> Yes 

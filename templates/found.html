@@ -1,8 +1,19 @@
 <html>
+    <head>
+        <link rel="stylesheet" href="{{ url_for('static', filename='test1.css') }}">
+    </head>
     <body>
+        <table>
+            <tr>
+            <td><img src="{{ url_for('static', filename='Logo.png') }}" , width="40px", height="40px"/></td><td><h1>Whage</h1></td>
+            </tr>
+        </table>
         <form action = "http://localhost:8001/index" method = "post">
             <h1>{{ illness }}</h1>
             <h3>Here are some people that may be able to help:</h3>
+            {% if therapist == False%}
+            <p>Unfortunately we have no doctors for {{ illness }} available.</p>
+            {% endif %}
             <ul>
             {% for i in therapists %}
             <li>{{ i }} - {{ therapists[i]['location'] }}<br>{{ therapists[i]['contact'] }}<br></li>

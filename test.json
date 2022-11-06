@@ -1,1 +1,1 @@
-{"json": [["does your head hurt?", 1, "broken leg"], ["Is your head bleeding?", "cut", "headache"]]}
+{"json": [["mental?", 1, 7], ["Memory issues?", 2, 3], ["Are you more irritable than usual?", "Alzheimers", "Schizophrenia"], ["Sleep disorders?", 4, 5], ["Loss of appetite?", "Depression", "PTSD"], ["Fear of being in public?", 6, "Anorexia"], ["Confusion?", "Social Anxiety Disorder", "Agoraphobia"], ["Fever?", 8, 10], ["Headache?", "Chickenpox", 9], ["Rash?", "Smallpox", "Flu"], ["Diharrea?", "Cholera", "Conjunctivitis"]]}

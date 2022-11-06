@@ -1,7 +1,15 @@
 <html>
+    <head>
+        <link rel="stylesheet" href="{{ url_for('static', filename='test1.css') }}">
+    </head>
     <body>
+        <table>
+            <tr>
+            <td><img src="{{ url_for('static', filename='Logo.png') }}" , width="40px", height="40px"/></td><td><h1>Whage</h1></td>
+            </tr>
+        </table>
         <form action = "http://localhost:8001/index" method = "post">
-            <h1>Welcome to WHAGE. Please press the button below to get started.</h1>
+            <h2>Welcome to Whage. Please press the button below to get started.</h2>
             <p><input type = "submit" value = "Symptom Analysis" name="Symptom Analysis"/></p>
             <p>Are you a healthcare professional who wants to be contacted?</p>
             <p><input type = "submit" value = "I'm a healthcare professional" name="I'm a healthcare professional"/></p>
