@@ -12,7 +12,7 @@
             <h1>{{ illness }}</h1>
             <h3>Here are some people that may be able to help:</h3>
             {% if therapist == False%}
-            <p>Unfortunately we have no doctors for {{ illness }} available.</p>
+            <p class="unknown">Unfortunately we have no doctors for {{ illness }} available.</p>
             {% endif %}
             <ul>
             {% for i in therapists %}

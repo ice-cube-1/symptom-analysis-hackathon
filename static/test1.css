@@ -2,9 +2,15 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     color: #223344;
     background-color: #fdfeff;
+    padding-left: 10px;
+
 }
 td {
     vertical-align: top;
     align-items: left;
     padding: 5px;
+}
+.unknown {
+    color: #a2a3a4;
+    font-size: small;
 }
