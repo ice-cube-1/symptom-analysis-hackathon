@@ -64,9 +64,9 @@ def addnew(position,illness):
 def createy(position):
     questions=dataLoad()
     if request.method=='POST':
-        animal=request.form['illness']
+        illness=request.form['illness']
         question=request.form['question']
-        questions.append([question,animal,questions[position][1]])
+        questions.append([question,illness,questions[position][1]])
         questions[position][1] = len(questions)-1
         dataDump(questions)
         return redirect('/index')
@@ -77,9 +77,9 @@ def createy(position):
 def create(position):
     questions=dataDump()
     if request.method=='POST':
-        animal=request.form['illness']
+        illness=request.form['illness']
         question=request.form['question']
-        questions.append([question,animal,questions[position][2]])
+        questions.append([question,illness,questions[position][2]])
         questions[position][2] = len(questions)-1
         dataDump(questions)
         return redirect('/index')
