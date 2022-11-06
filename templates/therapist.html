@@ -1,0 +1,17 @@
+<html>
+    <body>
+        <form action = "http://localhost:8001/professional" method = "post">
+            <p>Please enter your name</p>
+            <p><input type = "text" name = "name" /></p>
+            <p>What do you specialize in?</p>
+            {% for i in illnesses %}
+            <p><input type = "radio" name = "illness" value={{ i }} /> {{ i }}
+            {% endfor %}
+            <p>Where are you based?</p>
+            <p><input type = "text" name = "location" /></p>
+            <p>What is your email address?</p>
+            <p><input type = "text" name = "contact" /></p>
+            <p><input type = "submit" value = "OK" /></p>
+         </form>
+    </body>
+</html>

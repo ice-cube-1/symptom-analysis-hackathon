@@ -1,0 +1,15 @@
+<html>
+    <body>
+        <form action = "http://localhost:8001/index" method = "post">
+            <h1>{{ illness }}</h1>
+            <h3>Here are some people that may be able to help:</h3>
+            <ul>
+            {% for i in therapists %}
+            <li>{{ i }} - {{ therapists[i]['location'] }}<br>{{ therapists[i]['contact'] }}<br></li>
+            {% endfor %}
+            </ul>
+            <p>Please bear in mind that this is not equivalent to a doctor's diagnosis.</p>
+            <p><input type = "submit" value = "Go back" name="Go back"/></p>
+         </form>
+    </body>
+</html>

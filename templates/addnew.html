@@ -1,0 +1,11 @@
+<html>
+    <body>
+        <form action = "http://localhost:8001/addnew/{{ position }}" method = "post">
+            <p>Given the data inputted so far, it seems likely you have {{ illness }}.</p>
+            <p>Does this seem like the correct assesment to you?</p>
+            <p><input type = "radio" name = "check" value="yes" /> Yes 
+            <input type = "radio" name = "check" value="no" /> No </p>
+            <p><input type = "submit" value = "OK" /></p>
+         </form>
+    </body>
+</html>
